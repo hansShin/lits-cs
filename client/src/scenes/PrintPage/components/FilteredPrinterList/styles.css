@@ -1,0 +1,33 @@
+.filtered-printer-list {
+  min-height: 15vh;
+  margin-top: 10%;
+}
+
+.no-results {
+  text-align: left;
+  margin: 2% 0 0 0;
+  padding-left: 1%;
+}
+
+ul.filtered-printers {
+  margin: 2% 0 0 0;
+  padding-left: 7%;
+  list-style: none;
+}
+
+li.filtered-printer {
+  margin-bottom: 5%;
+}
+
+h2.section-title {
+  margin: 0;
+  color: #5e81ac;
+}
+
+h3.printer-name {
+  margin: 0;
+}
+
+p.printer-status {
+  margin: 0;
+}
