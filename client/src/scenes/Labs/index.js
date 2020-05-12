@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import useTimer from '../../services/timers';
 
-export default function Labs() {
+export default function Labs(props) {
   const name = getLabName(props.type);
 
   const now = useTimer(moment(), 60000, (callback) => { callback(moment()); });
@@ -10,24 +10,43 @@ export default function Labs() {
   const time = now.format('hh:mm A');
 
   return (
-    <div id='schedule'>
-      <div class='lab-name'>
-        <h1>{name}</h1>
+    <div>
+      <div id='schedule'>
+        <div class='lab-name'>
+          <h1>{name}</h1>
+        </div>
+        <div class='date'>
+          <h2>{date}</h2>
+        </div>
       </div>
-      <div class='date'>
-        <h2>{date}</h2>
-      </div>
-      {events}
-    </div>
-    <div id='footer'>
-      <div class='time'>
-        <h2>{time}</h2>
-      </div>
-      <div class='status'>
-        <h2>{status}</h2>
+      <div id='footer'>
+        <div class='time'>
+          <h2>{time}</h2>
+        </div>
       </div>
     </div>
   );
+  /*return (
+    <div>
+      <div id='schedule'>
+        <div class='lab-name'>
+          <h1>{name}</h1>
+        </div>
+        <div class='date'>
+          <h2>{date}</h2>
+        </div>
+        {events}
+      </div>
+      <div id='footer'>
+        <div class='time'>
+          <h2>{time}</h2>
+        </div>
+        <div class='status'>
+          <h2>{status}</h2>
+        </div>
+      </div>
+    </div>
+  );*/
 }
 
 function getLabName(labType) {

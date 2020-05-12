@@ -23,13 +23,13 @@ export default function Home() {
           <PrintPage />
         </Route>
         <Route path='/maclab'>
-          <Labs type='mac' />
+          <Labs type='maclab' />
         </Route>
         <Route path='/pclab1'>
-          <Labs type='pc1' />
+          <Labs type='pclab1' />
         </Route>
         <Route path='/pclab2'>
-          <Labs type='pc2' />
+          <Labs type='pclab2' />
         </Route>
         <Route path='/'>
           <nav>
