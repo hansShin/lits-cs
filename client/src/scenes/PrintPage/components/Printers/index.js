@@ -8,7 +8,7 @@ import Trays from './components/Trays/index';
 export default function Printers(props) {
   const printers = props.printerList.map((printerInfo, index) => {
     return (
-      <Printer printerInfo={printerInfo} key={index} />
+      <Printer printerInfo={printerInfo} key={index} noLink={props.noLink}/>
     );
   });
 
@@ -26,16 +26,29 @@ function Printer(props) {
   });
   const style = getBGStyle(printer.statusType);
 
-  return (
-    <li className='printer'>
-      <a href={`http://${printer.ip}/hp/device/DeviceStatus/Index`} target="_blank" rel="noopener noreferrer">
-        <h2 className='printer-name'>{printer.name}</h2>
-        <h4 className='printer-status' style={style}>{printer.status}</h4>
-        <Dials dialList={printer.dialList} />
-        <Trays trayList={printer.trayList} />
-      </a>
-    </li>
-  );
+  if (props.noLink) {
+    return (
+      <li className='printer'>
+        <a href="./" class="inactiveLink">
+          <h2 className='printer-name'>{printer.name}</h2>
+          <h4 className='printer-status' style={style}>{printer.status}</h4>
+          <Dials dialList={printer.dialList} />
+          <Trays trayList={printer.trayList} />
+        </a>
+      </li>
+    );
+  } else {
+    return (
+      <li className='printer'>
+        <a href={`http://${printer.ip}/hp/device/DeviceStatus/Index`} target="_blank" rel="noopener noreferrer">
+          <h2 className='printer-name'>{printer.name}</h2>
+          <h4 className='printer-status' style={style}>{printer.status}</h4>
+          <Dials dialList={printer.dialList} />
+          <Trays trayList={printer.trayList} />
+        </a>
+      </li>
+    );
+  }
 }
 
 function getBGStyle(statusType) {

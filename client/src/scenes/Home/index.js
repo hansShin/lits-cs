@@ -17,10 +17,10 @@ export default function Home() {
           <MissionControl />
         </Route>
         <Route path='/printer-control'>
-          <PrintPage />
+          <PrintPage type='status'/>
         </Route>
-        <Route path='/printers'>
-          <PrintPage />
+        <Route path='/printer-status'>
+          <PrintPage type='status'/>
         </Route>
         <Route path='/maclab'>
           <Labs type='maclab' />

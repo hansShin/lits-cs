@@ -29,3 +29,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+a.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+}

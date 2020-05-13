@@ -1,5 +1,5 @@
 import moment from 'moment';
-import fetchGCalEvents from '../../../fetchGCalEvents';
+import fetchGCalEvents from '../../../services/fetchGCalEvents';
 
 function fetchLabSchedule(calendarId, callback) {
   const timeMin = moment().startOf('day');

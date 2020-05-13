@@ -6,7 +6,7 @@ import FilteredPrinterList from './components/FilteredPrinterList/index';
 import {fetchPrinters, getInitialPrinters} from './services/fetchPrinters';
 import './styles.css';
 
-export default function PrintPage() {
+export default function PrintPage(props) {
   const initialPrinters = getInitialPrinters(printerList);
   const printers = useTimer(initialPrinters, 60000, (callback) => {
     fetchPrinters(printerList, callback);
@@ -21,7 +21,7 @@ export default function PrintPage() {
         <FilteredPrinterList printers={printers} type='no_response' />
       </div>
       <div className='main'>
-        <Printers printerList={printerList} />
+        <Printers printerList={printerList} noLink={props.type === 'status'}/>
       </div>
     </div>
   );

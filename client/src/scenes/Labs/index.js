@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import useTimer from '../../services/timers';
+import fetchLabSchedule from './services/fetchLabSchedule';
 
 export default function Labs(props) {
   const name = getLabName(props.type);

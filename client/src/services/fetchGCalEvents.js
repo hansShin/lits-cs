@@ -3,7 +3,7 @@ import request from 'superagent';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function fetchGCalEvents(calendarId, timeMin, timeMax, callback) {
-  const calendarUrl = getCalendarUrl(calendarId, maxResults, timeMin, timeMax);
+  const calendarUrl = getCalendarUrl(calendarId, timeMin, timeMax);
 
   return httpGetRequest(calendarUrl, (res) => {
     callback(null, res);
