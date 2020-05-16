@@ -1,0 +1,45 @@
+#legend {
+  height: 30%;
+}
+
+#legend > ul {
+  height: 80%;
+  margin-left: 0.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#legend > ul > li {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+}
+
+div.attending-legend {
+  border-right: solid 4px #9ac970;
+  margin-right: 1.5vh;
+  height: 4.5vh;
+  width: 0px;
+}
+
+div.coverage-needed-legend {
+  border-right: solid 4px #bf616a;
+  margin-right: 1.5vh;
+  height: 4.5vh;
+  width: 0px;
+}
+
+div.coverage-provided-legend {
+  border-right: solid 4px #ebcb8b;
+  margin-right: 1.5vh;
+  height: 4.5vh;
+  width: 0px;
+}
+
+div.sick-leave-legend {
+  border-right: solid 4px #8fbcbb;
+  margin-right: 1.5vh;
+  height: 4.5vh;
+  width: 0px;
+}

@@ -1,0 +1,37 @@
+.appointment {
+  display: flex;
+  flex-direction: row;
+}
+
+.appointment > div {
+  margin: auto 0 auto 0;
+  width: 80%;
+}
+
+.appointments {
+  height: 50%;
+}
+
+.appointments > ul {
+  padding: 1vh 0 2vh 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.no-events {
+  margin-top: 1vh;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.vert-bar {
+  margin-left: 0.5vh;
+  margin-right: 2vh;
+  height: 80%;
+  width: 0px;
+  border-right: solid 2px #5b6f8a;
+}
+

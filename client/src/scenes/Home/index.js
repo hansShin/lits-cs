@@ -17,7 +17,7 @@ export default function Home() {
           <MissionControl />
         </Route>
         <Route path='/printer-control'>
-          <PrintPage type='status'/>
+          <PrintPage type='control'/>
         </Route>
         <Route path='/printer-status'>
           <PrintPage type='status'/>

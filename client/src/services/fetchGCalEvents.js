@@ -1,15 +1,20 @@
 import request from 'superagent';
+import moment from 'moment';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function fetchGCalEvents(calendarId, timeMin, timeMax, callback) {
   const calendarUrl = getCalendarUrl(calendarId, timeMin, timeMax);
 
-  return httpGetRequest(calendarUrl, (res) => {
-    callback(null, res);
-  }, (err) => {
-    callback(err, null);
-  });
+  httpGetRequest(calendarUrl, callback);
+}
+
+function getStartTime(event) {
+  return moment(event.start.dateTime || event.start.date);
+}
+
+function getEndTime(event) {
+  return moment(event.end.dateTime || event.end.date);
 }
 
 function getCalendarUrl(calendarId, timeMin, timeMax) {
@@ -20,8 +25,8 @@ function getCalendarUrl(calendarId, timeMin, timeMax) {
   );
 }
 
-function httpGetRequest(calendarUrl, onResponse, onError) {
-  request.get(calendarUrl).then(onResponse).catch(onError);
+function httpGetRequest(calendarUrl, callback) {
+  request.get(calendarUrl).end(callback);
 }
 
-export default fetchGCalEvents;
+export { fetchGCalEvents, getStartTime, getEndTime };

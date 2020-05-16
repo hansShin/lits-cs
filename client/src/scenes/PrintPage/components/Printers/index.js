@@ -29,7 +29,7 @@ function Printer(props) {
   if (props.noLink) {
     return (
       <li className='printer'>
-        <a href="./" class="inactiveLink">
+        <a href="./" className="inactiveLink">
           <h2 className='printer-name'>{printer.name}</h2>
           <h4 className='printer-status' style={style}>{printer.status}</h4>
           <Dials dialList={printer.dialList} />

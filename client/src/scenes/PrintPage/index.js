@@ -4,7 +4,6 @@ import printerList from './printerList.json';
 import Printers from './components/Printers/index';
 import FilteredPrinterList from './components/FilteredPrinterList/index';
 import {fetchPrinters, getInitialPrinters} from './services/fetchPrinters';
-import './styles.css';
 
 export default function PrintPage(props) {
   const initialPrinters = getInitialPrinters(printerList);

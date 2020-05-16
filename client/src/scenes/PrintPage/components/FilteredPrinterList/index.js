@@ -13,7 +13,7 @@ export default function FilteredPrinterList(props) {
   if (printerEntries.length) {
     return (
       <div className='filtered-printer-list'>
-        <h2 className='section-title'>{props.type}</h2>
+        <h2 className='filtered-printer-list-title'>{props.type}</h2>
         <ul className='filtered-printers'>
           {printerEntries}
         </ul>
@@ -22,7 +22,7 @@ export default function FilteredPrinterList(props) {
   } else {
     return (
       <div className='filtered-printer-list'>
-        <h2 className='section-title'>{props.type}</h2>
+        <h2 className='filtered-printer-list-title'>{props.type}</h2>
         <div className='no-results'>
           <p>Nothing to report :]</p>
         </div>

@@ -13,15 +13,15 @@ export default function Labs(props) {
   return (
     <div>
       <div id='schedule'>
-        <div class='lab-name'>
+        <div className='lab-name'>
           <h1>{name}</h1>
         </div>
-        <div class='date'>
+        <div className='date'>
           <h2>{date}</h2>
         </div>
       </div>
       <div id='footer'>
-        <div class='time'>
+        <div className='time'>
           <h2>{time}</h2>
         </div>
       </div>
@@ -30,19 +30,19 @@ export default function Labs(props) {
   /*return (
     <div>
       <div id='schedule'>
-        <div class='lab-name'>
+        <div className='lab-name'>
           <h1>{name}</h1>
         </div>
-        <div class='date'>
+        <div className='date'>
           <h2>{date}</h2>
         </div>
         {events}
       </div>
       <div id='footer'>
-        <div class='time'>
+        <div className='time'>
           <h2>{time}</h2>
         </div>
-        <div class='status'>
+        <div className='status'>
           <h2>{status}</h2>
         </div>
       </div>
