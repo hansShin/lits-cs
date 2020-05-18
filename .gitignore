@@ -25,3 +25,5 @@ yarn-error.log*
 .env
 *.swp
 tags
+
+/client/public/profiles/
