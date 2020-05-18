@@ -26,4 +26,4 @@ yarn-error.log*
 *.swp
 tags
 
-/client/public/profiles/
+/public/profiles/
