@@ -11,6 +11,12 @@ body {
   font: 100% 'Roboto Mono', monospace;
 }
 
+.main {
+  height: 92vh;
+  width: 78%;
+  margin-left: 22%;
+}
+
 .sidebar {
   height: 96vh;
   width: 20%;
@@ -18,9 +24,30 @@ body {
   float: left;
 }
 
-.main {
-  width: 78%;
-  margin-left: 22%;
+.flex-row {
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-direction: row; /* Safari 6.1+ */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-direction: column; /* Safari 6.1+ */
+
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text-center {
+  text-align: center;
 }
 
 #page-title {
@@ -30,7 +57,7 @@ body {
 }
 
 h2.section-title {
-  margin-top: 7.5%;
+  margin-top: 5%;
 }
 
 ul,

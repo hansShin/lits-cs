@@ -6,7 +6,7 @@ import fetchLabSchedule from './services/fetchLabSchedule';
 export default function Labs(props) {
   const name = getLabName(props.type);
 
-  const now = useTimer(moment(), 60000, (callback) => { callback(moment()); });
+  const now = useTimer(moment(), 60000, (setState) => { setState(moment()); });
   const date = now.format('dddd - MMM M, YYYY');
   const time = now.format('hh:mm A');
 

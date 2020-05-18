@@ -1,5 +1,4 @@
 import React from 'react';
-import moment from 'moment';
 import useTimer from '../../../../services/timers';
 import fetchAppointments from './services/fetchAppointments';
 import './styles.css';
@@ -26,7 +25,7 @@ export default function AppointmentList(props) {
       <Appointment key={event.key}
                    title={event.title}
                    description={event.description}
-                   start={moment(event.start).format('hh:mma')} />
+                   start={event.start} />
     );
   });
 

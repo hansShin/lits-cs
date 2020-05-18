@@ -8,18 +8,19 @@ import {
 import MissionControl from '../MissionControl/index';
 import PrintPage from '../PrintPage/index';
 import Labs from '../Labs/index';
+import './styles.css';
 
 export default function Home() {
   return (
     <Router>
       <Switch>
-        <Route path='/mission-control'>
+        <Route path='/missioncontrol'>
           <MissionControl />
         </Route>
-        <Route path='/printer-control'>
+        <Route path='/printstaff'>
           <PrintPage type='control'/>
         </Route>
-        <Route path='/printer-status'>
+        <Route path='/printers'>
           <PrintPage type='status'/>
         </Route>
         <Route path='/maclab'>
@@ -32,17 +33,43 @@ export default function Home() {
           <Labs type='pclab2' />
         </Route>
         <Route path='/'>
-          <nav>
-            <ul>
-              <li> <Link to='/mission-control'>mission_control</Link> </li>
-              <li> <Link to='/printer-control'>printer_control</Link> </li>
-              <li> <Link to='/printer-status'>printer_status</Link> </li>
-              <li> <Link to='/maclab'>mac_lab</Link> </li>
-              <li> <Link to='/pclab1'>pc_lab_1</Link> </li>
-              <li> <Link to='/pclab2'>pc_lab_2</Link> </li>
-            </ul>
-          </nav>
-          <h2> yo, it home </h2>
+          <div className='container'>
+            <h2 id="page-title">Links for LITS-CS</h2>
+            <nav>
+              <ul className='nav-links'>
+                <li className='nav-link'>
+                  <Link to='/missioncontrol'>
+                    <p>Mission Control</p>
+                  </Link>
+                </li>
+                <li className='nav-link'>
+                  <Link to='/printstaff'>
+                    <p>Print Staff</p>
+                  </Link>
+                </li>
+                <li className='nav-link'>
+                  <Link to='/printers'>
+                    <p>Printers (public view)</p>
+                  </Link>
+                </li>
+                <li className='nav-link'>
+                  <Link to='/maclab'>
+                    <p>Mac Lab 1 Display</p>
+                  </Link>
+                </li>
+                <li className='nav-link'>
+                  <Link to='/pclab1'>
+                    <p>PC Lab 1 Display</p>
+                  </Link>
+                </li>
+                <li className='nav-link'>
+                  <Link to='/pclab2'>
+                    <p>PC Lab 2 Display</p>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </Route>
       </Switch>
     </Router>

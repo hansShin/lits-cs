@@ -54,13 +54,13 @@ function Printer(props) {
 function getBGStyle(statusType) {
   switch (statusType) {
     case 0:
-      return { backgroundColor: '#e8ffd4' };
+      return { backgroundColor: '#9ac970' };
     case 1:
       return { backgroundColor: 'transparent' };
     case 2:
-      return { backgroundColor: '#fff1d4' };
+      return { backgroundColor: '#ebcb8b' };
     case 3:
-      return { backgroundColor: '#ffd4d8' };
+      return { backgroundColor: '#bf616a' };
     default:
       return { backgroundColor: 'transparent' };
   }
