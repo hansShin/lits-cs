@@ -3,14 +3,12 @@ import useTimer from '../../../../services/timers';
 import fetchShifts from './services/fetchShifts';
 import './styles.css';
 
-const profilesPath = process.env.PUBLIC_URL + '/profiles/';
-
 function Avatar(props) {
   if (props.coverageNetId === null) {
     return (
       <div className="profiles">
         <span className="avatar">
-          <img src={`${profilesPath + props.netId}.jpg`} alt="" />
+          <img src={`./profiles/${props.netId}.jpg`} alt="" />
         </span>
       </div>
     );
@@ -18,10 +16,10 @@ function Avatar(props) {
     return (
       <div className="profiles">
         <span className="avatar">
-          <img src={`${profilesPath + props.coverageNetId}.jpg`} alt="" />
+          <img src={`./profiles/${props.coverageNetId}.jpg`} alt="" />
         </span>
         <span className="covered-avatar">
-          <img src={`${profilesPath + props.netId}.jpg`} alt="" />
+          <img src={`./profiles/${props.netId}.jpg`} alt="" />
         </span>
       </div>
     );

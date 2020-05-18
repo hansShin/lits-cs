@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 import MissionControl from '../MissionControl/index';
 import PrintPage from '../PrintPage/index';
-import Labs from '../Labs/index';
 import './styles.css';
 
 export default function Home() {
@@ -22,15 +21,6 @@ export default function Home() {
         </Route>
         <Route path='/printers'>
           <PrintPage type='status'/>
-        </Route>
-        <Route path='/maclab'>
-          <Labs type='maclab' />
-        </Route>
-        <Route path='/pclab1'>
-          <Labs type='pclab1' />
-        </Route>
-        <Route path='/pclab2'>
-          <Labs type='pclab2' />
         </Route>
         <Route path='/'>
           <div className='container'>
@@ -53,19 +43,19 @@ export default function Home() {
                   </Link>
                 </li>
                 <li className='nav-link'>
-                  <Link to='/maclab'>
+                  <a href='/maclab'>
                     <p>Mac Lab 1 Display</p>
-                  </Link>
+                  </a>
                 </li>
                 <li className='nav-link'>
-                  <Link to='/pclab1'>
+                  <a href='/pclab1'>
                     <p>PC Lab 1 Display</p>
-                  </Link>
+                  </a>
                 </li>
                 <li className='nav-link'>
-                  <Link to='/pclab2'>
+                  <a href='/pclab2'>
                     <p>PC Lab 2 Display</p>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </nav>

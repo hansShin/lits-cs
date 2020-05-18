@@ -9,7 +9,7 @@ export default function fetchAppointments(calendarId, setState) {
   const timeMax = moment().endOf('day');
 
   const handleResponse = (error, response) => {
-    let appointments = []
+    let appointments = [];
 
     if (!error) {
       JSON.parse(response.text).items.forEach((event) => {
