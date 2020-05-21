@@ -17,21 +17,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.no-events {
-  margin-top: 1vh;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
+.appointments > ul > li {
+  margin-bottom: 1.5vh;
 }
-
-.vert-bar {
-  margin-left: 0.5vh;
-  margin-right: 2vh;
-  height: 80%;
-  width: 0px;
-  border-right: solid 2px #5b6f8a;
-}
-

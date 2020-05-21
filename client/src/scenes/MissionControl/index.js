@@ -17,21 +17,42 @@ export default function MissionControl() {
   return (
     <div className='container'>
       <div className='sidebar'>
-        <h1 id="page-title">MISSION CONTROL</h1>
+        <h1 id='page-title'>MISSION CONTROL</h1>
         <Clock />
         <AppointmentList calendarId={APPOINTMENT_CALENDAR_ID} />
         <Legend />
       </div>
       <div className='main flex-row'>
-        <ShiftList calendarId={HELPDESK_CALENDAR_ID}
-                   coverageId={HELPDESK_COVERAGE_ID}
-                   name="helpdesk" />
-        <ShiftList calendarId={BLCC_CALENDAR_ID}
-                   coverageId={BLCC_COVERAGE_ID}
-                   name="blcc" />
-        <ShiftList calendarId={PRINT_CALENDAR_ID}
-                   coverageId={PRINT_COVERAGE_ID}
-                   name="print" />
+        <div className='shift-lists flex-col'>
+          <ShiftList calendarId={HELPDESK_CALENDAR_ID}
+                     coverageId={HELPDESK_COVERAGE_ID}
+                     title='@helpdesk_now'
+                     current={true} />
+          <ShiftList calendarId={HELPDESK_CALENDAR_ID}
+                     coverageId={HELPDESK_COVERAGE_ID}
+                     title='@helpdesk_next'
+                     current={false} />
+        </div>
+        <div className='shift-lists flex-col'>
+          <ShiftList calendarId={BLCC_CALENDAR_ID}
+                     coverageId={BLCC_COVERAGE_ID}
+                     title='@blcc_now'
+                     current={true} />
+          <ShiftList calendarId={BLCC_CALENDAR_ID}
+                     coverageId={BLCC_COVERAGE_ID}
+                     title='@blcc_next'
+                     current={false} />
+        </div>
+        <div className='shift-lists flex-col'>
+          <ShiftList calendarId={PRINT_CALENDAR_ID}
+                     coverageId={PRINT_COVERAGE_ID}
+                     title='@print_now'
+                     current={true} />
+          <ShiftList calendarId={PRINT_CALENDAR_ID}
+                     coverageId={PRINT_COVERAGE_ID}
+                     title='@print_next'
+                     current={false} />
+        </div>
       </div>
     </div>
   );

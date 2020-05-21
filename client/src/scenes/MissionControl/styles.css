@@ -1,5 +1,19 @@
-.flex-row {
+.no-events {
+  margin-top: 1vh;
+  height: 80%;
   display: flex;
   flex-direction: row;
+}
+
+.vert-bar {
+  margin-left: 0.5vh;
+  margin-right: 2vh;
+  height: 100%;
+  width: 0px;
+  border-right: solid 2px #5b6f8a;
+}
+
+.shift-lists {
+  width: 31%;
 }
 

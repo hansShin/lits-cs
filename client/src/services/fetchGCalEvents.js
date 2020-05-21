@@ -3,7 +3,8 @@ import moment from 'moment';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function fetchGCalEvents(calendarId, timeMin, timeMax, callback) {
+function fetchGCalEvents(calendarId, callback, timeMin=moment().startOf('day'),
+                         timeMax=moment().endOf('day')) {
   const calendarUrl = getCalendarUrl(calendarId, timeMin, timeMax);
 
   httpGetRequest(calendarUrl, callback);

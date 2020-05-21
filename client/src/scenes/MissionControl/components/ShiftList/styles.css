@@ -1,0 +1,76 @@
+.shift-list {
+  height: 100%;
+  width: 100%;
+}
+
+.shift-list > ul {
+  margin-top: 1vh;
+  width: 100%;
+}
+
+.shift-list > ul > li {
+  margin-bottom: 2vh;
+  width: 100%;
+}
+
+.shift-name {
+  width: 30%;
+}
+
+.avatar {
+  height: 9vh;
+  width: 9vh;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar > img {
+  height: 9vh;
+  width: 9vh;
+  border-radius: 50%;
+}
+
+.covered-avatar {
+  height: 4vh;
+  width: 4vh;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+
+.covered-avatar > img {
+  position: absolute;
+  top: -2vh;
+  left: -1.5vw;
+  border-radius: 50%;
+  height: 4vh;
+  width: auto;
+}
+
+div.attending {
+  border-left: solid 4px #9ac970;
+  margin-right: 2%;
+  height: 5vh;
+  width: 0px;
+}
+
+div.coverage-needed {
+  border-left: solid 4px #bf616a;
+  margin-right: 2%;
+  height: 5vh;
+  width: 0px;
+}
+
+div.coverage-provided {
+  border-left: solid 4px #ebcb8b;
+  margin-right: 2%;
+  height: 5vh;
+  width: 0px;
+}
+
+div.sick-leave {
+  border-left: solid 4px #8fbcbb;
+  margin-right: 2%;
+  height: 5vh;
+  width: 0px;
+}
