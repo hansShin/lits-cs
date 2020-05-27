@@ -1,3 +1,5 @@
+// This proxying setup only works for the development server
+// Production server sets up proxying through Apache
 const proxy = require('http-proxy-middleware');
 
 module.exports = (app) => {

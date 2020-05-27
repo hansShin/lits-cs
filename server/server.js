@@ -61,6 +61,8 @@ app.get('/pclab2', (req, res) => {
 app.get('/profiles/*', (req, res) => {
   if (!fs.existsSync(req.originalUrl)) {
     res.sendFile(path.join(__dirname, 'public/profiles/open 1.jpg'));
+  } else {
+    res.sendFile(path.join(__dirname, `public/${req.originalUrl}`));
   }
 });
 

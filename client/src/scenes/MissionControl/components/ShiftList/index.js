@@ -8,7 +8,7 @@ function Avatar(props) {
     return (
       <div className="profiles">
         <span className="avatar">
-          <img src={`./profiles/${props.netId}.jpg`} alt="" />
+          <img src={`/profiles/${props.netId}.jpg`} alt="" />
         </span>
       </div>
     );
@@ -16,10 +16,10 @@ function Avatar(props) {
     return (
       <div className="profiles">
         <span className="avatar">
-          <img src={`./profiles/${props.coverageNetId}.jpg`} alt="" />
+          <img src={`/profiles/${props.coverageNetId}.jpg`} alt="" />
         </span>
         <span className="covered-avatar">
-          <img src={`./profiles/${props.netId}.jpg`} alt="" />
+          <img src={`/profiles/${props.netId}.jpg`} alt="" />
         </span>
       </div>
     );
