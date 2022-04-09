@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "cheerio": "^1.0.0-rc.3",
     "http-proxy-middleware": "^0.20.0",
-    "moment": "^2.25.3",
+    "moment": "^2.29.2",
     "react": "^16.12.0",
     "react-circular-progressbar": "^2.0.3",
     "react-dom": "^16.12.0",
